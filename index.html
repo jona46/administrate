@@ -1,0 +1,53 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script type="text/javascript">
+		function Entero(f,numero)
+		{
+		if(isNaN(f[numero].value))
+			{
+			alert("No es un número entero");
+			f[numero].value="";
+			f[numero].focus();
+			return false;
+			}   
+		}
+	</script>
+</head>
+
+
+<body>
+	<div class="row">
+		<div class="col-sm-2" style="border:solid red 1px">primera</div>
+		<div class="col-sm-8" style="border:solid red 1px; text-align: center">
+		<form name="formulario" action="app/guarda_gasto.php" method="POST" onsubmit="return Entero(this, 'valor_concepto')">
+			<div>
+				<input type="text" id="valor" name="valor_concepto" required placeholder="Valor de la compra">
+			</div>
+			<div class="row" style="border: solid green 1px; padding: 0 auto">
+				<div class="iz" style="border: solid yellow 1px">
+					<div class="col-sm-12 custom-control custom-radio">
+						<input id="despensa" name="concepto" type="radio" value="Despensa" class="custom-control-input" checked required>
+						<label class="custom-control-label" for="despensa">Despensa</label>
+					</div>
+					<div class="col-sm-12 custom-control custom-radio">
+						<input id="remis" name="concepto" type="radio" value="Remis" class="custom-control-input" required>
+						<label class="custom-control-label" for="remis">Remis</label>
+					</div>
+				</div>
+				<div class="der" style="border: solid yellow 1px">
+					<div class="col-sm-12 custom-control custom-radio">
+						<input id="hiper" name="concepto" type="radio" value="Hipermercado Anselmi" class="custom-control-input" checked required>
+						<label class="custom-control-label" for="hiper">Hiper</label>
+					</div>
+				</div>
+			</div>
+
+			<input type="submit" name="enviar" value="Enviar">
+		</form>
+		</div>
+		<div class="col-sm-2" style="border:solid red 1px">ultima</div>
+	</div>
+
+</body>
+</html>
