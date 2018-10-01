@@ -19,44 +19,45 @@
 
 <body>
 	<div class="row">
-		<div class="col-sm-2" style="border:solid red 1px"></div>
-		<div class="col-sm-8" style="border:solid red 1px; text-align: center">
+		<div class="col-sm-1" style="border:solid red 1px"></div>
+		<div class="col-sm-10" style="border:solid red 1px; text-align: center">
 		<form name="formulario" action="app/guarda_gasto.php" method="POST" onsubmit="return Entero(this, 'valor_concepto')">
 			<div>
-				<input type="text" id="valor" name="valor_concepto" required placeholder="Valor de la compra">
+					<div class="textoGrande">Importe</div>
+				<input class="textoGrande" type="text" id="valor" name="valor_concepto" required placeholder="Valor de la compra">
 			</div>
 			<div>
-				<div>Fecha</div>
-				<input type="date" id="fecha" name="fecha">
+				<div class="textoGrande">Fecha</div>
+				<input class="textoGrande" type="date" id="fecha" name="fecha">
 			</div>
 
 			<div class="row" style="border: solid green 1px; text-align: center">
-				<div class="iz">
-					<div class="col-sm-12 custom-control custom-radio">
+				
+				<ul style="list-style:none; margin:0; padding:0; ">
+					</li>
 						<input id="despensa" name="concepto" type="radio" value="Despensa" class="custom-control-input" checked required>
-						<label class="custom-control-label" for="despensa">Despensa</label>
-					</div>
-					<div class="col-sm-12 custom-control custom-radio">
+						<label class="custom-control-label textoGrande" for="despensa">Despensa</label>
+					<li>
+				
+					<li>
 						<input id="remis" name="concepto" type="radio" value="Remis" class="custom-control-input" required>
-						<label class="custom-control-label" for="remis">Remis</label>
-					</div>
-				</div>
-				<div class="der">
-					<div class="col-sm-12 custom-control custom-radio">
+						<label class="custom-control-label textoGrande" for="remis">Remis</label>
+					</li>
+					<li>
 						<input id="hiper" name="concepto" type="radio" value="Hipermercado Anselmi" class="custom-control-input" required>
-						<label class="custom-control-label" for="hiper">Hiper</label>
-					</div>
-					<div class="col-sm-12 custom-control custom-radio">
+						<label class="custom-control-label textoGrande" for="hiper">Hiper</label>
+					</li>
+					<li>
 						<input id="farmacia" name="concepto" type="radio" value="Farmacia" class="custom-control-input" required>
-						<label class="custom-control-label" for="farmacia">Farmacia</label>
-					</div>
-				</div>
+						<label class="custom-control-label textoGrande" for="farmacia">Farmacia</label>
+					</li>
+			    </ul>
 			</div>
 
-			<input type="submit" name="guardar" value="Guardar">
+			<input class="textoGrande" type="submit" name="guardar" value="Guardar">
 		</form>
 		</div>
-		<div class="col-sm-2" style="border:solid red 1px"></div>
+		<div class="col-sm-1" style="border:solid red 1px"></div>
 	</div>
 
 </body>
